@@ -4,6 +4,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 plt.style.use("ggplot")
 
+
 df = pd.read_csv("yield_df.csv")
 
 df.head()
@@ -32,9 +33,11 @@ len(df['Area'].unique())
 
 len(df['Item'].unique())
 
+
 plt.figure(figsize=(15,20))
 sns.countplot(y = df['Area'])
 plt.show()
+
 
 plt.figure(figsize=(15,20))
 sns.countplot(y = df['Item'])
@@ -51,9 +54,11 @@ df['hg/ha_yield'].sum()
 
 yield_per_country
 
+
 plt.figure(figsize=(15,20))
 sns.barplot(y = country, x = yield_per_country)
 plt.show()
+
 
 crops = df['Item'].unique()
 yield_per_crop = []
